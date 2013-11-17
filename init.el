@@ -18,14 +18,8 @@
     auto-complete
     auto-complete-clang-async
     color-theme-solarized
-    ;cyberpunk-theme
-    ;zenburn-theme
     clojure-mode
-    ;python-mode
     geiser
-    ;ipython
-    ;org
-    ;org2blog
     markdown-mode+
     cider
     cider-decompile
