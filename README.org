@@ -20,10 +20,6 @@ Emacs时会自动检查所需的包是否已安装，如果没有则会自动安
 
 依赖clojure-mode和nrepl.el实现的Clojure IDE
 
-*** Python IDE
-
-使用了python-mode和ipython实现的Python IDE
-
 *** 自动补全
 
 使用auto-complete插件实现的自动补全，默认使用auto-complete内置的
@@ -36,19 +32,6 @@ dictionary，words-in-the-same-buffer等source，并支持clojure和python补
   才能生效（其机制是动态发送clojure代码到nrepl中执行以获取补全列表，因
   此其性能也不好，会有卡顿）。
 
-- Python补全
-
-  使用了rope，ropemacs和pymacs来实现Python补全、重构等功能。如果要使用
-  此功能，请自行安装rope和ropemacs（pymacs已包含在repo中了）：
-
-  #+BEGIN_SRC bash
-  sudo pip install rope
-  sudo pip install ropemacs
-  #+END_SRC
-
-  如果不安装rope和ropemacs，启动Emacs时会报错，所以不需要此功能的话，可
-  以将conf.d下面的python.el改名或者删除。
-
 - 补全快捷键优化
 
   因为Clojure的补全比较慢，所以Clojure模式下默认的自动补全不会使用
@@ -60,46 +43,9 @@ dictionary，words-in-the-same-buffer等source，并支持clojure和python补
 
 内置部分个人收集、编写的snippets，请参照snippets子目录。
 
-*** org2blog
-
-conf.d/blog.el是个人博客的配置，如果需要使用org2blog来写博客，请修改
-blog.el配置，改为自己的Wordpress配置。
-
-*** org-mode的LaTeX导出
-
-orgmode.el里的配置可用于方便地使用org-mode编写文章，slides并输出成为漂
-亮的PDF文件。此功能依赖texlive（最好完整安装，我用的是2011版，但2012应
-该也能行），并需要系统中安装了微软的中文字体（从Windows 7中获取的，宋
-体，黑体和楷体）。
-
-使用方法如下：
-
-- 编写文章
-
-  打开一个空的org文件，输入 =article= 并按 =TAB= 即可扩展成一个文章骨架，
-  把其中的标题、作者等修改好就可以使用org的语法来编写文章，之后可用
-  =C-c C-e p= 来输出PDF。如果是中文文章，请将 =LATEX_CLASS= 改成
-  =cn-article= 即可。
-
-- 编写beamer slides
-
-  打开一个空的org文件，输入 =beamer= 并按 =TAB= 即可扩展成一个slides骨
-  架，把其中的标题、作者等修改好，并按org的语法来编写slides，其中默认
-  二级标题对应一张slide。输出PDF的命令和上述的是一样的，并默认就支持中
-  文。
-
-如果需要调整字体等设定，请自行修改orgmode.el。
-
-另外，基于 minted 包的代码高亮也是支持的，只需要系统中安装有 Pygments
-即可。在 Linux 下安装方法如下：
-
-#+BEGIN_SRC bash
-sudo pip install Pygments
-#+END_SRC
-
 *** 字体和配色
 
-默认使用了Ubuntu Mono和文泉驿等宽微米黑，配色使用了solarized-light。如
+字体默认使用了Hiragino Snas GB，配色使用了solarized-light。如
 果需要修改字体和配色，请查看并修改settings.el。
 
 *** 自定义的功能和按键绑定
