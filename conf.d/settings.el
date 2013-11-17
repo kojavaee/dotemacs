@@ -2,7 +2,11 @@
 ;; Color theme
 ;(require 'birds-of-paradise-plus-theme)
 
-(load-theme 'deeper-blue t)
+(require 'color-theme)
+(require 'color-theme-solarized)
+(color-theme-initialize)
+(color-theme-solarized-dark)
+;(load-theme 'deeper-blue t)
 
 ;; (setq evil-default-cursor t)
 
@@ -10,12 +14,12 @@
 (if (display-graphic-p)
     (progn
       (set-face-attribute
-       'default nil :font "Source Code Pro Bold 9")
+       'default nil :font "Hiragino Sans GB")
       (dolist (charset '(kana han symbol cjk-misc bopomofo))
         (set-fontset-font (frame-parameter nil 'font)
                           charset
-                          (font-spec :family "文泉驿等宽微米黑"
-                                     :size 13
+                          (font-spec :family "Hiragino Sans GB"
+                                     :size 30
                                      :weight 'light)))))
 
 ;; Change auto-save dir
@@ -43,19 +47,19 @@
      (define-key *textmate-mode-map* [(control c) (control t)] nil)))
 
 (textmate-mode)
-(add-to-list '*textmate-project-roots* "project.clj")
-(add-to-list '*textmate-project-roots* "setup.py")
-(add-to-list '*textmate-project-roots* ".ropeproject")
-(add-to-list '*textmate-project-roots* ".project")
-(add-to-list '*textmate-project-roots* "build.xml")
-(add-to-list '*textmate-project-roots* "pom.xml")
-(add-to-list '*textmate-project-roots* "build.gradle")
+;(add-to-list '*textmate-project-roots* "project.clj")
+;(add-to-list '*textmate-project-roots* "setup.py")
+;(add-to-list '*textmate-project-roots* ".ropeproject")
+;(add-to-list '*textmate-project-roots* ".project")
+;(add-to-list '*textmate-project-roots* "build.xml")
+;(add-to-list '*textmate-project-roots* "pom.xml")
+;(add-to-list '*textmate-project-roots* "build.gradle")
 
 ;; Ack. use textmate project root as ack root dir
-(defun get-project-dir (arg)
-  (textmate-project-root))
+;(defun get-project-dir (arg)
+;  (textmate-project-root))
 
-(setq ack-default-directory-function 'get-project-dir)
+;(setq ack-default-directory-function 'get-project-dir)
 
 ;; IDO hacks
 ;; Display ido results vertically, rather than horizontally
