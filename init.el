@@ -19,6 +19,7 @@
     auto-complete-clang-async
     color-theme-solarized
     clojure-mode
+    clojure-test-mode
     geiser
     markdown-mode+
     cider
@@ -32,7 +33,8 @@
     expand-region
     textmate
     zencoding-mode
-    ack))
+    ack
+    midje-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

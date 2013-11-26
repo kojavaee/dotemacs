@@ -133,7 +133,7 @@
 ;(global-set-key (kbd "C-S-r") 'find-file-in-project)
 
 ;; Expand-region
-(global-set-key (kbd "C-=") 'er/expand-region)
+;(global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; Iedit-mode
 (global-set-key (kbd "C-;") 'iedit-mode)
@@ -145,3 +145,7 @@
 (global-set-key (kbd "C-:") 'toggle-clj-keyword-string)
 (global-set-key (kbd "C-S-g") 'ack-current-word)
 (global-set-key (kbd "C-*") 'isearch-forward-at-point)
+;(global-set-key (kbd "C--") 'decrease-font-size) ;Ctrl+-
+;(global-set-key (kbd "C-0") 'default-font-size)  ;Ctrl+0
+;(global-set-key (kbd "C-=") 'increase-font-size)
+                                        ;Ctrl+=

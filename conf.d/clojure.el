@@ -23,7 +23,8 @@
 (require 'clojure-mode)
 (require 'rainbow-delimiters)
 (require 'ac-nrepl)
-
+(require 'midje-mode)
+;(require 'clojure-jump-to-file)
 
 (add-hook 'clojure-mode-hook
           (lambda ()
@@ -32,6 +33,7 @@
             (add-to-list 'ac-sources 'ac-source-yasnippet)
             (setq buffer-save-without-query t)))
 
+(add-hook 'clojure-mode-hook 'midje-mode)
 
 ;;Treat hyphens as a word character when transposing words
 (defvar clojure-mode-with-hyphens-as-word-sep-syntax-table
