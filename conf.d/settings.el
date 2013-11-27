@@ -147,5 +147,9 @@
 (global-set-key (kbd "C-*") 'isearch-forward-at-point)
 ;(global-set-key (kbd "C--") 'decrease-font-size) ;Ctrl+-
 ;(global-set-key (kbd "C-0") 'default-font-size)  ;Ctrl+0
-;(global-set-key (kbd "C-=") 'increase-font-size)
-                                        ;Ctrl+=
+;(global-set-key (kbd "C-=") 'increase-font-size) ;Ctrl+=
+
+;;显示行号,emacs内置的函数
+(require 'linum)
+(global-linum-mode)
+
