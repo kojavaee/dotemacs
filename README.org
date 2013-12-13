@@ -58,10 +58,6 @@ dictionary，words-in-the-same-buffer等source，并支持clojure和python补
 
 =C-<comma>= 切换到上一个buffer
 
-** 安装
-
-clone本repo到~/.emacs.d，启动Emacs即可。
-
 ** 一建格式化
 
 ref:http://www.blogjava.net/killme2008/archive/2011/07/26/355041.html
@@ -80,6 +76,9 @@ ref:http://www.blogjava.net/killme2008/archive/2011/07/26/355041.html
 
 将这段代码添加到你的emacs配置文件（~/.emacs)，重启emacs，以后格式化源码都可以用F7一键搞定。
 
+** 安装
+
+clone本repo到~/.emacs.d，启动Emacs即可。
 
 #+BEGIN_SRC bash
 cd ~
