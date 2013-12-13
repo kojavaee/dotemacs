@@ -153,3 +153,11 @@
 (require 'linum)
 (global-linum-mode)
 
+;;格式化整个文件函数
+(defun indent-whole ()
+  (interactive)
+  (indent-region (point-min) (point-max))
+  (message "format successfully"))
+;;绑定到F7键
+(global-set-key [f7] 'indent-whole)
+
